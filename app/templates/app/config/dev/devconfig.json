@@ -1,0 +1,80 @@
+{
+    "server" : {
+        "port"           : 3200,
+        "name"           : "nTeract",
+        "version" : "1.0.0",
+        "acceptable"     : [ "application/json" ],
+        "throttleRate"   : 50,
+        "throttleBurst"  : 100
+    },
+    "mongo" : {
+        "db" : "mongodb://localhost/FRMSGeo"
+    },
+	"facebook": {
+		  "clientID": "APP_ID",
+		  "clientSecret": "APP_SECRET",
+		  "callbackURL": "http://localhost:3000/auth/facebook/callback"
+		},
+	"twitter": {
+	  "clientID": "CONSUMER_KEY",
+	  "clientSecret": "CONSUMER_SECRET",
+	  "callbackURL": "http://localhost:3000/auth/twitter/callback"
+	},
+	"github": {
+	  "clientID": "APP_ID",
+	  "clientSecret": "APP_SECRET",
+	  "callbackURL": "http://localhost:3000/auth/github/callback"
+	},
+	"google": {
+	  "clientID": "APP_ID",
+	  "clientSecret": "APP_SECRET",
+	  "callbackURL": "http://localhost:3000/auth/google/callback"
+	},
+	"i18n": {
+	  "ns": "translation",
+	  "lng": "en",
+	  "detectLngQS": "locale",
+	  "cookieName": "locale",
+	  "supportedLngs": ["en"],
+	  "fallbackLng": "en",
+	  "preload": "en",
+	  "load": "current",
+	  "sendMissing": false,
+	  "debug": true,
+	  "ignoreRoutes": ["/css", "/img", "js", "lib", "views"],
+	  "resGetPath": "./locales/__lng__/__ns__.json"
+	},
+	"socket": {
+	  "ns": "/api"
+	},
+    "log" : {
+        "name"        : "FRMS-FRLogging",
+        "use"         : "File",
+        "dir"         : "./logs/",
+        "file"        : "frmsFR.log",
+        "graylogHost" : "",
+        "graylogPort" : ""
+    },
+    "CORS" : {
+        "credentials" : false,
+        "origins" : [],
+        "Headers" : []
+    },
+    "security" : {
+
+        "scheme"         : "Custom",
+        "dateIdentifier" : "X-Custom-Date",
+
+        "credentials" : {
+            "df7cab0c18e3c3d82b977bcd667d1aeb70ada9fd" : {
+                "username"      : "dominik",
+                "secret"        : "33yrDBjjw9grl3vNZn0a63Ctqf0=",
+                "admin"         : true
+            }
+        }
+
+    },
+    "admin" : {
+        "allowViewLog" : true
+    }
+}

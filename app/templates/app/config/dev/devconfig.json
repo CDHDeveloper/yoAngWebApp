@@ -1,14 +1,14 @@
 {
     "server" : {
-        "port"           : 3200,
-        "name"           : "nTeract",
-        "version" : "1.0.0",
+        "port"           : <%= appport %>,
+        "name"           : "<%= appname %>",
+        "version" : "0.0.0",
         "acceptable"     : [ "application/json" ],
         "throttleRate"   : 50,
         "throttleBurst"  : 100
     },
     "mongo" : {
-        "db" : "mongodb://localhost/FRMSGeo"
+        "db" : "<%= mongoRoute =>"
     },
 	"facebook": {
 		  "clientID": "APP_ID",

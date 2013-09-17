@@ -329,6 +329,8 @@ Generator.prototype.askForLocalizationInfo = function askForLocalizationInfo() {
       }.bind(this));
 }
 
+Generator.prototype.askForConfigInfo = function askForConfigInfo() {
+}
 Generator.prototype.readIndex = function readIndex() {
   this.indexFile = this.engine(this.read('../../templates/common/index.html'), this);
 };
